@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cr-02-rbac
+rules:          # Authorization rules
+  - apiGroups:  # 1st API group
+      - '*'      # An empty string designates the core API groups.
+    resources:
+      - '*'
+    verbs:
+      - get
+      - list
+      - watch
